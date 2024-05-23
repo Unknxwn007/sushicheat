@@ -109,6 +109,13 @@ namespace menu {
 
 		ImGui::GetIO().MouseDrawCursor = isOpen;
 
+		/*
+																		TODO LIST
+																		- Fix the error upon injection
+																		- Add actual code to checkboxes and buttons
+
+		*/
+
 		if (isOpen)
 		{
 			ImGui::Begin("Sushicheat", &isOpen, window_flags);
@@ -122,7 +129,7 @@ namespace menu {
 				ImGui::Checkbox("Infinite Resolve", &no_titlebar);
 			}
 			ImGui::SameLine();
-			if (ImGui::CollapsingHeader("Items"))
+			if (ImGui::CollapsingHeader("Resources"))
 			{
 				if (ImGui::Button("100x Flowers")) {}
 				if (ImGui::Button("100x Supplies")) {}
