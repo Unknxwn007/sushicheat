@@ -111,10 +111,12 @@ namespace menu {
 
 		/*
 																		TODO LIST
-																		- Fix the error upon injection
+																		- Fix uninject
 																		- Add actual code to checkboxes and buttons
 
 		*/
+
+		static bool godmode = false;
 
 		if (isOpen)
 		{
@@ -125,24 +127,26 @@ namespace menu {
 
 			if (ImGui::CollapsingHeader("Health"))
 			{
-				ImGui::Checkbox("Infinite Health", &no_titlebar);
+				ImGui::Checkbox("Infinite Health", &godmode);
 				ImGui::Checkbox("Infinite Resolve", &no_titlebar);
 			}
-			ImGui::SameLine();
+
 			if (ImGui::CollapsingHeader("Resources"))
 			{
 				if (ImGui::Button("100x Flowers")) {}
 				if (ImGui::Button("100x Supplies")) {}
 				if (ImGui::Button("100x Iron")) {}
+				ImGui::SameLine();
 				if (ImGui::Button("100x Steel")) {}
 				if (ImGui::Button("100x Linen")) {}
 				if (ImGui::Button("100x Predator Hide")) {}
+				ImGui::SameLine();
 				if (ImGui::Button("100x Leather")) {}
 				if (ImGui::Button("100x Bamboo")) {}
 				if (ImGui::Button("100x Yew Wood")) {}
 				if (ImGui::Button("100x Silk")) {}
 			}
-			ImGui::SameLine();
+
 			if (ImGui::CollapsingHeader("Ammo"))
 			{
 				if (ImGui::Button("Max Kunai")) {}
